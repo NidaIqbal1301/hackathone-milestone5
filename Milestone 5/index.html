@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unique Path and Shareable Link Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Unique Path and Shareable Link Resume Builder</h1>
+        
+        <!-- Form for User Input -->
+        <form id="resume-form">
+            <section id="personal-info-form">
+                <h2>Personal Information</h2>
+
+                <label for="username">Username: </label>
+                <input type="text" id="username" name="username" placeholder="Enter your username" required><br>
+                
+                <label for="name">Name: </label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required><br>
+                
+                <label for="email">Email: </label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required><br>
+                
+                <label for="phone">Phone: </label>
+                <input type="text" id="phone" name="phone" placeholder="Enter your phone number"><br>
+                
+                <label for="profile-img">Profile Picture URL: </label>
+                <input type="text" id="profile-img" name="profile-img" placeholder="Enter image URL"><br>
+            </section>
+            
+            <section id="education-form">
+                <h2>Education</h2>
+                <label for="education">Degree and Institution: </label>
+                <input type="text" id="education" name="education" placeholder="Enter degree and institution" required><br>
+                
+                <label for="grad-year">Graduation Year: </label>
+                <input type="text" id="grad-year" name="grad-year" placeholder="Enter graduation year"><br>
+            </section>
+
+            <section id="work-experience-form">
+                <h2>Work Experience</h2>
+                <label for="work-title">Job Title: </label>
+                <input type="text" id="work-title" name="work-title" placeholder="Enter job title" required><br>
+                
+                <label for="company">Company: </label>
+                <input type="text" id="company" name="company" placeholder="Enter company name" required><br>
+                
+                <label for="work-duration">Work Duration: </label>
+                <input type="text" id="work-duration" name="work-duration" placeholder="Enter work duration"><br>
+            </section>
+
+            <section id="skills-form">
+                <h2>Skills</h2>
+                <label for="skills">Skills (comma separated): </label>
+                <input type="text" id="skills" name="skills" placeholder="Enter skills separated by commas"><br>
+            </section>
+
+            <button type="submit">Generate Resume</button>
+        </form>
+
+        <!-- Editable Resume Preview -->
+        <section id="resume-preview">
+            <h2>Your Resume</h2>
+            <div id="resume-output" contenteditable="true"></div>
+        </section>
+    </div>
+
+    <br>
+
+    <!-- Secton for the shaeable link and download option -->
+     <div id="shareable-link-container" stlye="display: none;">
+        <h2>Shareable Link</h2>
+        <a href="#" id="shareable-link" target="_blank"></a>
+        <br>
+        <button id="download-pdf"><b>Download as PDF</b></button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
